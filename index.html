@@ -577,8 +577,8 @@ function generateHackerImage() {
 }
 
 function hireHacker() {
-  if (game.btc >= 100) {
-    game.btc -= 100;
+  if (game.btc >= 0) {
+    game.btc -= 0;
     const hackerName = hackerNames[Math.floor(Math.random() * hackerNames.length)];
     const hacker = { 
       name: hackerName, 
@@ -597,8 +597,8 @@ function hireHacker() {
 
 function upgradeHacker(hackerName) {
   const hacker = game.hackers.find(h => h.name === hackerName);
-  if (hacker && game.btc >= hacker.level * 50) {
-    game.btc -= hacker.level * 50;
+  if (hacker && game.btc >= hacker.level * 0) {
+    game.btc -= hacker.level * 0;
     hacker.level++;
     game.btcPerSecond += 0.00000005 * hacker.level;
     updateHackers();
